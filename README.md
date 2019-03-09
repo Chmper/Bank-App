@@ -16,3 +16,6 @@ in your comand prompt being inside direcotory.
 
 ### Exclaimer
 There is plenty to do, app doesnt seem so well but it was one of the first 'bigger' project.
+
+
+<img align="center" src="https://github.com/Chmper/Bank-App/blob/master/logging.png">
