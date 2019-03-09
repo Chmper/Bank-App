@@ -1,0 +1,12 @@
+{% extends "banking/transfers_home.html" %}
+
+{% block transfer_content %}
+<div id="myDIV">
+  <a class="link" href="{% url 'normal_transfer' %}" > <button class="btn">Do osoby lub firmy</button></a>
+  <a class="link" href="{% url 'self_transfer' %}" > <button class="btn">Do siebie</button></a>
+  <a class="link" href="" > <button class="btn">Na telefon</button></a>
+  <a class="link" href="" > <button class="btn">Podatkowy</button></a>
+  <a class="link" href="" > <button class="btn">ZUS</button></a>
+</div>
+
+{% endblock %}

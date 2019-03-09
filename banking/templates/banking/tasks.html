@@ -1,0 +1,12 @@
+{% extends "banking/home.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link rel="stylesheet" type="test/css" href="{% static 'css/tasks.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="task-header">
+    List of active periodic transfers
+  </div>
+{% endblock %}

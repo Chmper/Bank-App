@@ -1,0 +1,55 @@
+{% extends "banking/transfers_home.html" %}
+
+
+{% block transfer_content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="who">
+        Who: {{ form.who }}
+    </div>
+    <div class="title">
+        Title: {{ form.title }}
+    </div>
+    <div class="quota">
+        Quota: {{ form.quota }}
+    </div>
+    <div class="receiver">
+        Receiver: {{ form.receiver }}
+        <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal">
+          <span class="glyphicon glyphicon-book"></span>
+        </button>
+    <br>
+  </div>
+      <input class="btn btn-secondary" type="submit" value="Submit">
+</form>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Take bill from list</h4>
+      </div>
+      <div class="modal-body">
+        {% for fav in user.account.favourites.all %}
+          <a href="#" class="fav" data-dismiss="modal">
+            <p class="fav-number" name='moo'>{{fav}}</p>
+            <p class="fav-name">{{fav.account}}</p>
+          </a>
+        {% endfor %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+	$(".fav").click(function(){
+    var str = $(this).find('.fav-number').text().split(' ').join('');
+	$("#id_receiver").attr("value", str);
+  //$(this).find('.fav-number').text()
+	});
+});
+</script>
+{% endblock %}

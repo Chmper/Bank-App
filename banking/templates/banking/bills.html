@@ -1,0 +1,29 @@
+{% extends "banking/home.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bills.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="header">
+  <div class="top"> Your bills </div>
+  <a href="{% url 'create_bill' %}" class="new-bill"><span class="glyphicon glyphicon-plus"></span>Create new Bill</a>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    Bills summary:
+  </div>
+  <div class="col=sm-3">
+    {% for bill in bills  %}
+      <div class="bill">
+        Bills:<br>
+        {{bill}}:  {{bill.balance}}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

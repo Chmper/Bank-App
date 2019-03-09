@@ -1,0 +1,234 @@
+/* Add a black background color to the top navigation */
+body{
+  background-color: #fff;
+  height: 100%;
+}
+.topnav {
+    width: 100%;
+    background-color: #1c2321;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #eef1ef;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.active{
+  background-color: #7d98a1;
+}
+
+#w3-button:hover{
+  background-color: #eef1ef;
+  color: black;
+}
+
+.container{
+  margin-top: 20px;
+  margin-left: 12%;
+  margin-bottom: 20px;
+  width: 80%;
+  height: 60%;
+  background-color: #fff;
+}
+
+.downnav{
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 80%;
+  height: 10%;
+  background-color: #d3d3d3;
+}
+
+.w3-bar-item{
+  background-color: #fff;
+}
+
+.w3-bar-item:active{
+  text-decoration: underline;
+}
+
+#bills{
+  padding: 10px 10px 10px 10px;
+  font-family: "FSLola";
+  src: url("/venezia/fonts30/fslola-bold.woff");
+  font-style: normal;
+  margin-bottom: 5px;
+  height: 200px;
+}
+#bills-list{
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 79%;
+  font-size: 14px;
+}
+#bill-number{
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 85%;
+}
+
+#sum{
+  margin-left: 70%;
+  margin-right: 189px;
+  float: left;
+}
+#summary{
+  text-align: right;
+  margin-right: 10px;
+}
+
+.turn-off{
+  margin-left: 44%;
+  padding-top: 10px;
+}
+
+.loan{
+  background-color: #7d98a1;
+  height: 100px;
+  width: 200px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+
+.loan a:hover, .loan a:active, .loan a:checked{
+  text-decoration: none;
+}
+
+#down-one{
+  margin-top: 5px;
+  height: 270px;
+}
+
+#loan{
+  font-family: "FSLola";
+  src: url("/venezia/fonts30/fslola-bold.woff");
+  text-align: center;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 20pt;
+}
+
+#latest{
+  margin-bottom: 3px;
+}
+
+.transfer{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#date{
+  float: left;
+  margin-right: 5px;
+}
+#person{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  float: left;
+  margin-left: 15px;
+}
+#quota-red{
+  margin-left: 150px;
+  text-align: right;
+}
+#quota-red b{
+  color: red;
+}
+#quota-green{
+  margin-left: 150px;
+  text-align: right;
+}
+#quota-green b{
+  color: green;
+}
+
+#full-history{
+  border-radius: 100px !important;
+  background-color: #7d98a1;
+  border: 1px solid gainsboro;
+  line-height: 13px;
+  padding: 6px 20px 4px 20px;
+  text-transform: uppercase;
+  color: #eef1ef !important;
+  font-weight: normal !important;
+  font-family: "FSLola" !important;
+  text-align: center;
+}
+.sticky a{
+  text-decoration: none;
+}
+
+#inne{
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.bills-header{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* HISTORY SITE */
+.history-container{
+  margin-left: 60px;
+  padding-left: 50px;
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.history-header{
+  margin-left: 60px;
+  padding-left: 50px;
+}
+#history{
+  margin-top: 20px;
+}
+#name{
+  height: 22.5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#history-date{
+  font-weight: bold;
+  float: left;
+  width: 69.23px;
+  margin-right: 20px;
+}
+#history-number{
+  font-weight: bold;
+  float: left;
+  width: 200px;
+}
+#history-name{
+  font-weight: bold;
+  float: left;
+}
+#history-quota{
+  font-weight: bold;
+  text-align: right;
+}
+#history-bar{
+  height: 2px;
+  border-radius: 2px;
+  padding-left: 30px;
+}

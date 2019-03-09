@@ -1,0 +1,24 @@
+{% extends "banking/home.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/transfer.css' %}">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="{% static "js/bootstrap.min.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+
+  <div class="nav">
+    <ul>
+      <li class="home"><a class="link" href="{% url 'transfers' %}" > Wykonaj przelew jednorazowy </a></li>
+      <li class="tutorials"><a class="link" href="{% url 'periodic' %}"> Wykonaj przelew cykliczny</a></li>
+      <li class="about"><a class="link" href="{% url 'tasks' %}"> Lista przelewów cyklicznych </a></li>
+    </ul>
+  </div>
+
+  {% block transfer_content %}
+
+  {% endblock %}
+
+{% endblock %}

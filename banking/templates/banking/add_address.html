@@ -1,0 +1,15 @@
+{% extends "banking/book_home.html" %}
+
+{% block book_content %}
+
+<h class="header"> Add address to you favourite list </h>
+<form method="post" class="form" action="{% url 'add_address' %}">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputPassword1">Address number</label>
+    <input type="text" class="form-control" name='number' placeholder="Enter number">
+  </div>
+  <button type="submit" class="btn btn-primary" style="width:150px;">Submit</button>
+</form>
+
+{% endblock %}

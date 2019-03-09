@@ -1,0 +1,118 @@
+.nav ul {
+      list-style: none;
+      background-color: #fff;
+      text-align: center;
+      padding: 0;
+      margin-left: 25px;
+    }
+.nav li {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2em;
+      line-height: 40px;
+      height: 40px;
+      float: left;
+      margin-left: 5px;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+      margin-right: 10px;
+    }
+.nav a {
+  font-size: 18px;
+    text-transform: uppercase;
+   text-decoration: none;
+   color: #black;
+ }
+
+#myDIV{
+  margin-left: 250px;
+}
+
+.active{
+    background-color: #666;
+    color: white;
+}
+
+.not_avaiable{
+  margin-top: 50px;
+  margin-left: 26%;
+  font-size: 30px;
+  font-style: italic;
+  color: red;
+}
+
+.link{
+  color: #000;
+}
+
+.who{
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.who input{
+  margin-left: 25px;
+}
+.title{
+  margin-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.title input{
+  margin-left: 28px;
+}
+.quota{
+  padding-right: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+.quota input{
+  margin-left: 15px;
+}
+.receiver{
+  margin-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.receiver input{
+  margin-left: 1px;
+}
+
+.fav-number{
+  float: left;
+  margin-left: 5px;
+}
+.fav-name{
+  text-align: right;
+  margin-right: 5px;
+}
+.fav, .fav:focus, .fav:active{
+  padding: 3px;
+  padding-top: 5px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.fav:hover{
+  background-color: rgb(210,210,210);
+  text-decoration: none;
+  color: inherit;
+}
+
+.counter{
+  float: left;
+}
+input{
+  border-radius: 2px;
+  width: 190px;
+}
+.counter input{
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 40px;
+}
+.selects select{
+  font: inherit;
+  height: 27.8px;
+  border-radius: 2px;
+}

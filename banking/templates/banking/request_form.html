@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/request.css' %}">
+  </head>
+<body>
+<div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <form class="form-signin" method="post" action="http://127.0.0.1:8000/validate">
+              {% csrf_token %}
+                <span id="reauth-email" class="reauth-email"></span>
+                <input id="inputEmail" class="form-control" placeholder="user name" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="pin" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+</body>
+</html>

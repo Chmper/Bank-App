@@ -1,0 +1,63 @@
+{% extends "banking/home.html" %}
+
+{% block content %}
+  <div class="row">
+      <div class="col-md-10" id="bills">
+        <div class="bills-header">
+          <p id="bills-list"><b>BILLS LIST</b> </p>
+          <p id="balance"><b>BALANCE</b> </p>
+        </div>
+        <hr>
+        {% for bill in user.account.bills.all %}
+        <div>
+          <p id="bill-number">{{bill.number}}</p>
+          <p id="balance">{{bill.balance}}</p>
+        </div>
+        {% endfor %}
+        <hr>
+          <p id="sum"><b>SUM</b></p>
+          <p id="summary"><b>{{sum}}</b></p>
+      </div>
+      <div class="col-sm-2">
+        <a href="">
+          <div class="loan">
+            <p id="loan"> Take a loan </p>
+          </div>
+        </a>
+      </div>
+      <hr>
+    </div>
+    <div class="row" id="down-one">
+      <div class="col-md-6" id="history">
+        <p id='latest'><b>LATEST TRANSFERS</b> </p><hr>
+        {% if not transfers %}
+          Try sending transfer
+        {% else %}
+          {% for transfer in transfers  %}
+            <div class="transfer">
+              {% if transfer.sender.account.user == user %}
+              <p id="date">{{transfer.date|date:"d.m.Y"}}</p>  <p id="person"><b>{{transfer.receiver}}</b></p> <p id="quota-red"><b>-{{transfer.quota}}</b> PLN</p>
+              {% else %}
+              <p id="date">{{transfer.date|date:"d.m.Y"}}</p>  <p id="person"><b>{{transfer.sender}}</b></p> <p id="quota-green"><b>{{transfer.quota}}</b> PLN</p>
+              {% endif %}
+              <hr>
+            </div>
+          {% endfor %}
+          <footer class="sticky">
+        	   <a id="full-history" href="#" class="btn-gray-gradient" data-gemius-event-type="action" data-gemius-event-action-id="120105" data-gemius-event-action-name="desktop.ostatnie-operacje-zobacz-historie">Zobacz całą historię</a>
+          </footer>
+        {% endif %}
+
+
+      </div>
+
+      <div class="col-sm-3" id="inne" style="background-color: #d3d3d3; height:400px;">
+        inne
+      </div>
+
+      <div class="col-sm-2" style="background-color: #d3d3d3; height:400px;">
+
+      </div>
+
+  </div>
+{% endblock %}

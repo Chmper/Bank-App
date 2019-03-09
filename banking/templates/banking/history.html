@@ -1,0 +1,25 @@
+{% extends "banking/home.html" %}
+
+{% block content %}
+<div class="history-header">
+  <p id='history-date'> DATE <p>
+  <p id='history-number'> NUMBER <p>
+  <p id='history-name'> NAME <p>
+  <p id='history-quota'> QUOTA <p>
+
+    <hr id="history-bar">
+</div>
+<div class="history-container">
+
+  {% for transfer in transfers  %}
+    <div class="transfer" id='history'>
+      {% if transfer.sender.account.user == user %}
+      <p id="date">{{transfer.date|date:"d.m.Y"}}</p>  <p id="person"><b>{{transfer.receiver}}</b></p> <p id="name">{{transfer.receiver.account}}</p> <p id="quota-red"><b>-{{transfer.quota}}</b> PLN</p>
+      {% else %}
+      <p id="date">{{transfer.date|date:"d.m.Y"}}</p>  <p id="person"><b>{{transfer.sender}}</b></p> <p id="name">{{transfer.sender.account}}</p> <p id="quota-green"><b>{{transfer.quota}}</b> PLN</p>
+      {% endif %}
+      <hr>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
